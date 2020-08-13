@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="types">
+
+
+
+
+        <item>all</item>
+        <item>education</item>
+        <item>social</item>
+        <item>music</item>
+        <item>charity</item>
+        <item>cooking</item>
+        <item>diy</item>
+        <item>busywork</item>
+        <item>recreational</item>
+        <item>relaxation</item>
+
+        All</string-array>
+
+    <string-array name="dificulity">
+
+
+
+
+        <item>all</item>
+        <item>The most difficult</item>
+        <item>heavy</item>
+        <item>easy</item>
+        <item>middle</item>
+
+
+        All</string-array>
+
+
+</resources>
