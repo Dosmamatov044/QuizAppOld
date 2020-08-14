@@ -6,6 +6,7 @@ import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import com.example.quizappvi.adapters.MainPagerAdapter;
 import com.example.quizappvi.ui.fragments.MainFragment;
@@ -16,12 +17,16 @@ import com.google.android.material.navigation.NavigationView;
 public class MainActivity extends AppCompatActivity {
 BottomNavigationView navigationView;
 
-    private NonScrollBarViewPager viewPager;
+
+TextView quiz;
+
+
+private NonScrollBarViewPager viewPager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+   quiz=findViewById(R.id.Quiz1);
         viewPager = findViewById(R.id.main_pager);
 
      navigationView=findViewById(R.id.navigView);
@@ -51,12 +56,19 @@ BottomNavigationView navigationView;
                 switch (item.getItemId()) {
                     case R.id.MainFragmentM:
                         viewPager.setCurrentItem(0,false);
+
+                    quiz.setText("Quiz");
+
                         break;
                     case R.id.HistoryFragmentM:
                         viewPager.setCurrentItem(1,false);
+                       quiz.setText("History");
+
                         break;
                         case R.id.SettingsFragment:
                         viewPager.setCurrentItem(2,false);
+                      quiz.setText("Settings");
+
                         break;
 
 
