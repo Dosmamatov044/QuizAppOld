@@ -10,7 +10,7 @@
     <item>
         <bitmap
             android:gravity="center"
-            android:src="@drawable/brain1"/>
+            android:src="@drawable/brainmy"/>
     </item>
 
 </layer-list>
