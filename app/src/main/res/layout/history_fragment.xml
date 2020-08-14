@@ -13,42 +13,7 @@
         />
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:orientation="horizontal"
-        android:layout_gravity="center"
-        >
-        <Button
-           android:id="@+id/minus"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="-"
-            android:textSize="36dp"
-            android:layout_marginEnd="20dp"
 
-            />
-
-        <TextView
-            android:id="@+id/counter"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="0"
-            android:textSize="40dp"/>
-        <Button
-
-            android:id="@+id/plus"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:text="+"
-            android:textSize="36dp"
-            />
-
-
-
-    </LinearLayout>
 
 
 </FrameLayout>

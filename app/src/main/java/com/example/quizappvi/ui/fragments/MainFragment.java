@@ -26,9 +26,6 @@ import java.util.Objects;
 public class MainFragment extends Fragment {
 
     private MainViewModel mViewModel;
-     private Button plus;
-     private Button minus;
-     TextView counter;
 
 
     public static MainFragment newInstance() {

@@ -9,13 +9,14 @@ import android.view.MenuItem;
 
 import com.example.quizappvi.adapters.MainPagerAdapter;
 import com.example.quizappvi.ui.fragments.MainFragment;
+import com.example.viewPager.NonScrollBarViewPager;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity {
 BottomNavigationView navigationView;
 
-    private ViewPager viewPager;
+    private NonScrollBarViewPager viewPager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
