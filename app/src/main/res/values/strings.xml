@@ -10,4 +10,8 @@
     <string name="homefragment">HomeFragment</string>
     <string name="difficultyy">dif</string>
     <string name="questions_a">questions_a</string>
+    <string name="correct_answers">Correct answers:</string>
+    <string name="Correct_answers" />
+    <string name="_8_10">8/10</string>
+    <string name="mixed">Mixed</string>
 </resources>
