@@ -8,7 +8,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.PopupMenu;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -18,6 +20,7 @@ import com.example.quizappvi.R;
 import com.example.quizappvi.ui.fragments.ClassHis;
 
 import java.util.ArrayList;
+import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 public class AdapterH  extends RecyclerView.Adapter<AdapterH.ViewHolderH>  {
 
@@ -66,7 +69,7 @@ private Context context;
    public     TextView textCategory,textMixed,textClock,textCorrectAnswers,textDifficulty,textEasy;
     public ImageButton imageButton;
     private static  final String TAG="MyViewHolder";
-
+RelativeLayout relativeLayout;
 
         public ViewHolderH(@NonNull View itemView) {
             super(itemView);
@@ -108,12 +111,17 @@ imageButton.setOnClickListener(this);
            switch ((item.getItemId())){
 
                case R.id.deleteH:
+
+
                    return  true;
                case R.id.createH:
                    return  true;
                case R.id.change_colorH:
+
                    return true;
-               default:
+
+
+                   default:
                    return false;
 
            }

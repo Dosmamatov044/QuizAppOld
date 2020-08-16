@@ -25,6 +25,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Rate us"
+
+        android:id="@+id/rateUs"
         android:layout_marginTop="190dp"
         android:textAlignment="textStart"
         android:background="@drawable/folder"
@@ -33,11 +35,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="leave feedback"
+        android:id="@+id/leaveFeedback"
+
         android:layout_marginTop="250dp"
         android:textAlignment="textStart"
        android:background="@drawable/folder"
         />
     <Button
+
+      android:id="@+id/clear_history"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="clear history"
