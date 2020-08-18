@@ -26,15 +26,54 @@
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_centerHorizontal="false"
-     android:text="@string/questions_a"
+     android:text="Questions amount:"
       android:layout_marginTop="180dp"
-           android:layout_marginStart="90dp"
+           android:layout_marginStart="100dp"
+      android:textColor="#BDB8B8"
+
       />
 
 
+    <TextView
+
+        android:id="@+id/changetextValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="false"
+       android:layout_marginLeft="225dp"
+        android:text="10"
 
 
 
+        android:textColor="@color/black"
+        android:textStyle="italic"
+              android:layout_marginTop="180dp"
+        android:textAllCaps="true"
+        />
+
+
+
+
+
+
+
+      <SeekBar
+        android:id="@+id/seekBar"
+          android:layout_width="250dp"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="90dp"
+          android:layout_marginTop="205dp"
+        android:max="20"
+        android:progress="10"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:progressTint="@color/purple"
+     android:thumb="@drawable/seekbar_thumb"
+
+       />
+
+
+    <!--
 
     <com.warkiz.widget.IndicatorSeekBar
 
@@ -71,7 +110,7 @@ app:isb_thumb_color="@color/purple"
         app:isb_only_thumb_draggable="false"
 
 
-        />
+        />- -->
 
     <TextView
         android:layout_width="wrap_content"
@@ -154,16 +193,16 @@ app:isb_thumb_color="@color/purple"
         android:layout_marginTop="500dp"
         android:layout_centerHorizontal="true"
         android:background="@drawable/buttonbackground"
+            android:id="@+id/Bstart"
 
-
-        >
-
-
-
+        />
 
 
 
-    </Button>
+
+
+
+
 
 
 

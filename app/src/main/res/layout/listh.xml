@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    android:layout_width="390dp"
     android:layout_height="wrap_content"
 
+     android:layout_marginStart="3dp"
     android:layout_marginTop="90dp"
-    android:background="@color/white"
-
+    android:background="@drawable/backgroundforlisth"
+     android:elevation="6dp"
+    android:translationZ="4dp"
+    android:id="@+id/rel"
     >
 
 
@@ -108,15 +111,18 @@ android:src="@drawable/ic_vector"
 
         android:clickable="true"
         android:format12Hour="hh:mm:ss"
-        android:format24Hour="dd:MMM: yyyy: hh:ss a"
+        android:format24Hour="dd:MMM: yyyy: hh:ss"
         android:text="TextClock"
-        android:textColor="@color/green"
+        android:textColor="@color/ic_down_background"
         android:textSize="10dp"
 
-        android:layout_marginTop="66dp"
+        android:layout_marginTop="74dp"
         android:layout_marginLeft="270dp"
 
         android:focusable="true" />
+
+
+
 
 
 </RelativeLayout>

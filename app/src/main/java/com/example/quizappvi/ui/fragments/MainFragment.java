@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.SeekBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -24,8 +25,12 @@ import com.example.quizappvi.R;
 import java.util.Objects;
 
 public class MainFragment extends Fragment {
+Button startB;
+Spinner s,s2;
+SeekBar seekbar;
+TextView changeTextValue;
 
-    private MainViewModel mViewModel;
+private MainViewModel mViewModel;
 
 
     public static MainFragment newInstance() {
@@ -58,23 +63,93 @@ public class MainFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+changeTextValue=view.findViewById(R.id.changetextValue);
+seekbar=view.findViewById(R.id.seekBar);
+       startB=view.findViewById(R.id.Bstart);
 
-        Spinner s = view. findViewById(R.id.CategoryQ);
-        ArrayAdapter <CharSequence> adapter = ArrayAdapter.createFromResource(
-                Objects.requireNonNull(getContext()), R.array.types, R.layout.support_simple_spinner_dropdown_item);
-        adapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
-        s.setAdapter(adapter);
+        s = view. findViewById(R.id.CategoryQ);
+      s2 = view. findViewById(R.id.DifQ);
 
-        Spinner s2 = view. findViewById(R.id.CategoryQ);
-        ArrayAdapter <CharSequence> adapter2 = ArrayAdapter.createFromResource(
-                Objects.requireNonNull(getContext()), R.array.types, R.layout.support_simple_spinner_dropdown_item);
-        adapter2.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
-        s2.setAdapter(adapter2);
+spinner1();
+spinner2();
+start();
+
+
+seekbar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+    @Override
+    public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+
+
+
+
+        changeTextValue.setText(String.valueOf(new Integer(progress)));
+
+    }
+
+    @Override
+    public void onStartTrackingTouch(SeekBar seekBar) {
+
+    }
+
+    @Override
+    public void onStopTrackingTouch(SeekBar seekBar) {
+
+    }
+});
+
 
     }
 
 
 
+
+
+
+
+
+    public void start(){
+
+        startB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                Toast.makeText(getContext(), "в задании про логику на кнопку нету", Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
+
+
+    }
+
+
+
+
+public  void spinner1(){
+
+
+    ArrayAdapter <CharSequence> adapter = ArrayAdapter.createFromResource(
+            Objects.requireNonNull(getContext()), R.array.types, R.layout.support_simple_spinner_dropdown_item);
+    adapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+    s.setAdapter(adapter);
+
+
+
+}
+
+    public  void spinner2(){
+
+
+
+
+        ArrayAdapter <CharSequence> adapter2 = ArrayAdapter.createFromResource(
+                Objects.requireNonNull(getContext()), R.array.dificulity, R.layout.support_simple_spinner_dropdown_item);
+        adapter2.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+        s2.setAdapter(adapter2);
+
+
+    }
 
 
 }

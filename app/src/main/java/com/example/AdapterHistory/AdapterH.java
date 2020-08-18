@@ -7,13 +7,16 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.PopupMenu;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.quizappvi.R;
@@ -25,7 +28,11 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
 public class AdapterH  extends RecyclerView.Adapter<AdapterH.ViewHolderH>  {
 
 
-  private ArrayList <ClassHis> list ;
+
+
+    AdapterH adapterH;
+
+ private ArrayList <ClassHis> list ;
 private Context context;
 
 
@@ -45,7 +52,7 @@ private Context context;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolderH holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolderH holder, final int position) {
         ClassHis classHis=list.get(position);
          holder.textCategory.setText(classHis.getTextCategory());
          holder.textClock.setText(classHis.getTextClock());
@@ -53,6 +60,11 @@ private Context context;
          holder.textCorrectAnswers.setText(classHis.getTextCorrectAnswers());
          holder.textDifficulty.setText(classHis.getTextDifficulty());
          holder.textEasy.setText(classHis.getTextEasy());
+
+
+        /*         list.remove(position);
+                 notifyItemRemoved(position);
+                 notifyItemRangeChanged(position,list.size());*/
 
 
 
@@ -70,6 +82,9 @@ private Context context;
     public ImageButton imageButton;
     private static  final String TAG="MyViewHolder";
 RelativeLayout relativeLayout;
+public Context context;
+
+
 
         public ViewHolderH(@NonNull View itemView) {
             super(itemView);
@@ -79,8 +94,17 @@ RelativeLayout relativeLayout;
             textCorrectAnswers=itemView.findViewById(R.id.correct_answers);
             textDifficulty=itemView.findViewById(R.id.difficulty);
             textEasy=itemView.findViewById(R.id.easy);
+             relativeLayout=itemView.findViewById(R.id.rel);
+
+
+
+
+
                 imageButton=itemView.findViewById(R.id.menu_dots);
-imageButton.setOnClickListener(this);
+
+
+
+                imageButton.setOnClickListener(this);
 
 
 
@@ -106,28 +130,36 @@ imageButton.setOnClickListener(this);
         }
 
         @Override
-        public boolean onMenuItemClick(MenuItem item) {
+            public boolean onMenuItemClick(MenuItem item) {
 
-           switch ((item.getItemId())){
+                switch ((item.getItemId())){
 
-               case R.id.deleteH:
+                    case R.id.deleteH:
 
-
-                   return  true;
-               case R.id.createH:
-                   return  true;
-               case R.id.change_colorH:
-
-                   return true;
+                        Log.d(TAG,"удалил"+getAdapterPosition());
 
 
-                   default:
-                   return false;
-
-           }
+                        return  true;
+                    case R.id.createH:
 
 
+                        Log.d(TAG,"ничего нету"+getAdapterPosition());
 
-        }
+                        return  true;
+                    case R.id.change_colorH:
+
+                       relativeLayout.getResources().getColor(R.color.black);
+
+                        return true;
+
+
+                    default:
+                        return false;
+
+                }
+
+
+
+            }
     }
 }
